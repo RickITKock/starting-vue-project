@@ -5,6 +5,15 @@ const app = Vue.createApp({
       name: "",
     };
   },
+  computed: {
+    fullName() {
+      console.log("Running computed");
+      if (this.name === "") {
+        return "Anonymous";
+      }
+      return this.name + " " + "Kock";
+    },
+  },
   methods: {
     add() {
       this.counter++;
