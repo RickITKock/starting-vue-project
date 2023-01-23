@@ -2,6 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       enteredGoal: "",
+      message: "",
       goals: [],
     };
   },
@@ -11,6 +12,10 @@ const app = Vue.createApp({
     },
     removeGoal(index) {
       this.goals.splice(index, 1);
+    },
+    setMessage() {
+      this.message = this.$refs.message.value;
+      console.dir(this.$refs.message);
     },
   },
 });
